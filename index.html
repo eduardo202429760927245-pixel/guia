@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixmacro Ferragens e Ferramentas | Loja em São Paulo - SP</title>
+    <meta name="description" content="Há 12 anos oferecendo ferragens, ferramentas, material elétrico e hidráulico em São Paulo. Visite nossa loja na Av. Nossa Senhora do Sabará, 3100 - Vila Emir.">
+    <meta name="keywords" content="ferragens São Paulo, ferramentas Vila Emir, material elétrico, hidráulico, construção, reforma, loja ferragens, Mixmacro">
+    <meta name="author" content="Mixmacro Ferragens e Ferramentas">
+    <meta property="og:title" content="Mixmacro Ferragens e Ferramentas">
+    <meta property="og:description" content="Sua loja completa de materiais para construção, reforma e manutenção em São Paulo">
+    <meta property="og:type" content="business.business">
+    <meta property="place:location:latitude" content="-23.672344">
+    <meta property="place:location:longitude" content="-46.650669">
+    
+    <style>
+        /* Reset e Variáveis */
+        :root {
+            --primary: #2C3E50;
+            --primary-dark: #1A252F;
+            --secondary: #E74C3C;
+            --accent: #F39C12;
+            --light: #ECF0F1;
+            --dark: #2C3E50;
+            --gray: #7F8C8D;
+            --light-gray: #F8F9FA;
+            --white: #FFFFFF;
+            --shadow: 0 5px 20px rgba(0,0,0,0.08);
+            --shadow-hover: 0 10px 30px rgba(0,0,0,0.12);
+            --radius: 10px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 30px auto 0;
+        }
+
+        /* Header */
+        .main-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-icon {
+            background: var(--accent);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 10px rgba(243, 156, 18, 0.3);
+        }
+
+        .logo-text h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .header-contacts {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item i {
+            color: var(--accent);
+            font-size: 1.3rem;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+        }
+
+        .contact-info strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        /* Navigation */
+        .main-nav {
+            background-color: rgba(255,255,255,0.05);
+            padding: 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 18px 25px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: var(--accent);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background-color: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 70%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.85)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 140px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            font-weight: 800;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 25px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .badge i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+            box-shadow: 0 6px 20px rgba(243, 156, 18, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #e67e22;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(243, 156, 18, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--light-gray);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--accent);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Products Section */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .product-header {
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3.5rem;
+        }
+
+        .product-body {
+            padding: 30px;
+        }
+
+        .product-body h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .product-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .product-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-list li:last-child {
+            border-bottom: none;
+        }
+
+        .product-list i {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+
+        /* Location Section */
+        .location-section {
+            background: linear-gradient(135deg, var(--light-gray) 0%, #E8EAF6 100%);
+        }
+
+        .location-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .location-info {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .info-block {
+            margin-bottom: 40px;
+        }
+
+        .info-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-block h3 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .info-block h3 i {
+            color: var(--accent);
+        }
+
+        .address-details p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+
+        .address-details i {
+            color: var(--secondary);
+            width: 25px;
+            text-align: center;
+        }
+
+        .business-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .business-hours tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .business-hours tr:last-child {
+            border-bottom: none;
+        }
+
+        .business-hours td {
+            padding: 15px 0;
+            font-size: 1.1rem;
+        }
+
+        .business-hours td:first-child {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .map-container {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 500px;
+            position: relative;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            background: linear-gradient(135deg, var(--light) 0%, #E3F2FD 100%);
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        /* Certifications */
+        .certifications-section {
+            background-color: var(--light-gray);
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .cert-card i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .cert-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            font-weight: 800;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            opacity: 0.9;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 20px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            transition: var(--transition);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Footer */
+        .main-footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h3 {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #BDC3C7;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 10px;
+        }
+
+        .footer-links i {
+            color: var(--accent);
+            font-size: 0.9rem;
+            width: 20px;
+        }
+
+        .company-info p {
+            margin-bottom: 20px;
+            color: #BDC3C7;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .company-info i {
+            color: var(--accent);
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95A5A6;
+            font-size: 0.95rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 1100px) {
+            .hero h2 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content, .location-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header-contacts {
+                justify-content: center;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-link {
+                text-align: center;
+                padding: 15px;
+            }
+            
+            .hero {
+                padding: 100px 0;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .section {
+                padding: 70px 0;
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .products-grid, .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-container {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-text h1 {
+                font-size: 1.3rem;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .product-body, .service-card, .location-info {
+                padding: 25px;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Ícones animados */
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#inicio" class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Mixmacro Ferragens e Ferramentas</h1>
+                        <p>Desde 2013 - Qualidade e Confiança</p>
+                    </div>
+                </a>
+                
+                <div class="header-contacts">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt pulse"></i>
+                        <div class="contact-info">
+                            <strong>Ligue agora</strong>
+                            <div>(11) 4328-XXXX</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-info">
+                            <strong>Horário</strong>
+                            <div>Seg-Sex: 8h às 18h</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <div class="container nav-container">
+                    <a href="#inicio" class="nav-link"><i class="fas fa-home"></i> Início</a>
+                    <a href="#sobre" class="nav-link"><i class="fas fa-store"></i> Sobre Nós</a>
+                    <a href="#produtos" class="nav-link"><i class="fas fa-toolbox"></i> Produtos</a>
+                    <a href="#localizacao" class="nav-link"><i class="fas fa-map-marker-alt"></i> Localização</a>
+                    <a href="#servicos" class="nav-link"><i class="fas fa-concierge-bell"></i> Serviços</a>
+                    <a href="#contato" class="nav-link"><i class="fas fa-phone-alt"></i> Contato</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content animate">
+                <h2>Tudo para sua obra, reforma e manutenção</h2>
+                <p>Há mais de 12 anos sendo referência em ferragens, ferramentas e materiais para construção na Zona Sul de São Paulo.</p>
+                
+                <div class="hero-badges">
+                    <div class="badge">
+                        <i class="fas fa-award"></i> 12+ anos no mercado
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-boxes"></i> +10 categorias
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-users"></i> Atendimento especializado
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#localizacao" class="btn btn-primary">
+                        <i class="fas fa-directions"></i> Como chegar
+                    </a>
+                    <a href="https://wa.me/55114328XXXX" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-whatsapp"></i> Fale no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section class="section about-section" id="sobre">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre a Mixmacro</h2>
+                <p>Conheça nossa história e por que somos a escolha certa para suas necessidades em ferragens e ferramentas</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text animate">
+                    <h3>Nossa História</h3>
+                    <p>Fundada em <strong>13 de maio de 2013</strong>, a <strong>Mixmacro Ferragens e Ferramentas</strong> começou como um pequeno empreendimento na Vila Emir e hoje é referência no comércio de materiais para construção na região.</p>
+                    <p>Como <strong>Microempresa</strong> registrada como <strong>Empresário Individual</strong> (CNPJ: 18.102.316/0001-50), optante pelo Simples Nacional, mantemos a qualidade e preços competitivos que nos fizeram crescer ao longo dos anos.</p>
+                    <p>Nossa atividade principal é o <strong>comércio varejista de ferragens e ferramentas</strong> (CNAE 47.44-0-01), com diversas atividades secundárias que nos permitem atender às mais variadas necessidades de nossos clientes.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-card">
+                            <i class="fas fa-certificate"></i>
+                            <h4>Registro Ativo</h4>
+                            <p>CNPJ ativo desde 2013, situação regular com a Receita Federal</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4>Localização Estratégica</h4>
+                            <p>Próximo ao Parque do Chuvisco, fácil acesso e estacionamento</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Atendimento Personalizado</h4>
+                            <p>Equipe treinada para orientar na escolha dos melhores produtos</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-tags"></i>
+                            <h4>Preços Competitivos</h4>
+                            <p>Melhor custo-benefício da região, com diversas opções de pagamento</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image animate">
+                    <div style="background: white; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow);">
+                        <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 1.5rem;">Dados da Empresa</h3>
+                        <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                            <p><strong>Razão Social:</strong> Otavio Alves de Oliveira Neto Ferragens e Ferramentas</p>
+                            <p><strong>Nome Fantasia:</strong> Mixmacro Ferragens e Ferramentas</p>
+                        </div>
+                        <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                            <p><strong>CNPJ:</strong> 18.102.316/0001-50</p>
+                            <p><strong>Inscrição Estadual:</strong> 142.382.880.119</p>
+                        </div>
+                        <div>
+                            <p><strong>Data de Abertura:</strong> 13/05/2013</p>
+                            <p><strong>Porte:</strong> Micro Empresa</p>
+                            <p><strong>Natureza Jurídica:</strong> Empresário (Individual)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section class="section" id="produtos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Produtos</h2>
+                <p>Ampla variedade em ferragens, ferramentas e materiais para construção, reforma e manutenção</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Ferragens e Ferramentas -->
+                <div class="product-card animate">
+                    <div class="product-header">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <div class="product-body">
+                        <h3>Ferragens e Ferramentas</h3>
+                        <p>Tudo o que você precisa para obras, reformas e reparos domésticos.</p>
+                        <ul class="product-list">
+                            <li><i class="fas fa-check"></i> Ferramentas manuais e elétricas</li>
+                            <li><i class="fas fa-check"></i> Fechaduras, trincos e dobradiças</li>
+                            <li><i class="fas fa-check"></i> Parafusos, porcas e arruelas</li>
+                            <li><i class="fas fa-check"></i> Alicates, chaves e martelos</li>
+                            <li><i class="fas fa-check"></i> Serras, lixas e abrasivos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Material Elétrico -->
+                <div class="product-card animate">
+                    <div class="product-header">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="product-body">
+                        <h3>Material Elétrico</h3>
+                        <p>Produtos de qualidade para instalações elétricas seguras.</p>
+                        <ul class="product-list">
+                            <li><i class="fas fa-check"></i> Fios e cabos elétricos</li>
+                            <li><i class="fas fa-check"></i> Disjuntores e DDRs</li>
+                            <li><i class="fas fa-check"></i> Tomadas e interruptores</li>
+                            <li><i class="fas fa-check"></i> Luminárias e refletores</li>
+                            <li><i class="fas fa-check"></i> Fitas isolantes e conectores</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Material Hidráulico -->
+                <div class="product-card animate">
+                    <div class="product-header">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                    <div class="product-body">
+                        <h3>Material Hidráulico</h3>
+                        <p>Tudo para instalações e reparos hidráulicos.</p>
+                        <ul class="product-list">
+                            <li><i class="fas fa-check"></i> Tubos e conexões PVC/CPVC</li>
+                            <li><i class="fas fa-check"></i> Registros e válvulas</li>
+                            <li><i class="fas fa-check"></i> Torneiras e misturadores</li>
+                            <li><i class="fas fa-check"></i> Sifões e conexões sanitárias</li>
+                            <li><i class="fas fa-check"></i> Chuveiros e aquecedores</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização -->
+    <section class="section location-section" id="localizacao">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossa Localização</h2>
+                <p>Visite nossa loja física na Zona Sul de São Paulo - Fácil acesso e estacionamento</p>
+            </div>
+            
+            <div class="location-container">
+                <div class="location-info animate">
+                    <div class="info-block">
+                        <h3><i class="fas fa-map-marker-alt"></i> Endereço Completo</h3>
+                        <div class="address-details">
+                            <p><i class="fas fa-store"></i> <strong>Mixmacro Ferragens e Ferramentas</strong></p>
+                            <p><i class="fas fa-road"></i> Av. Nossa Senhora do Sabará, 3100 - Loja</p>
+                            <p><i class="fas fa-map-pin"></i> Vila Emir - São Paulo/SP</p>
+                            <p><i class="fas fa-mail-bulk"></i> CEP: 04447-010</p>
+                            <p><i class="fas fa-car"></i> Estacionamento fácil na região</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h3><i class="fas fa-clock"></i> Horário de Funcionamento</h3>
+                        <div class="business-hours">
+                            <table>
+                                <tr>
+                                    <td>Segunda a Sexta:</td>
+                                    <td>8h00 às 18h00</td>
+                                </tr>
+                                <tr>
+                                    <td>Sábado:</td>
+                                    <td>8h00 às 13h00</td>
+                                </tr>
+                                <tr>
+                                    <td>Domingo:</td>
+                                    <td>Fechado</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h3><i class="fas fa-phone-alt"></i> Contatos</h3>
+                        <div class="address-details">
+                            <p><i class="fas fa-phone"></i> <strong>Telefone 1:</strong> (11) 4328-XXXX</p>
+                            <p><i class="fas fa-phone"></i> <strong>Telefone 2:</strong> (11) 4328-XXXX</p>
+                            <p><i class="fas fa-envelope"></i> <strong>E-mail:</strong> otavio@mixmacro.com.br</p>
+                            <p><i class="fas fa-user"></i> <strong>Proprietário:</strong> Otavio Alves de Oliveira Neto</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container animate">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.112946279025!2d-46.65066892369926!3d-23.67234426138061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce451aca7d0f1f%3A0x714f6079c2c88f33!2sAv.%20Nossa%20Sra.%20do%20Sabar%C3%A1%2C%203100%20-%20Vila%20Emir%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004447-010!5e0!3m2!1spt-BR!2sbr!4v1712345678901!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="section" id="servicos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Além da venda de produtos, oferecemos serviços especializados para melhor atender nossos clientes</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Orçamento Personalizado</h3>
+                    <p>Preparamos orçamentos detalhados para sua obra ou projeto, com orientação técnica especializada sobre os melhores produtos para cada necessidade.</p>
+                </div>
+                
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Entrega Agendada</h3>
+                    <p>Para compras acima de determinado valor, oferecemos serviço de entrega agendada na região de São Paulo, com segurança e pontualidade.</p>
+                </div>
+                
+                <div class="service-card animate">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Assistência Técnica</h3>
+                    <p>Orientação sobre uso e aplicação de produtos, garantindo que você faça a escolha certa para seu projeto e utilize os materiais corretamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificações -->
+    <section class="section certifications-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Registro e Regularidade</h2>
+                <p>Empresa registrada e em situação regular junto aos órgãos competentes</p>
+            </div>
+            
+            <div class="certifications-grid">
+                <div class="cert-card animate">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>CNPJ Ativo</h3>
+                    <p>Registro ativo desde 2013 na Receita Federal do Brasil</p>
+                </div>
+                
+                <div class="cert-card animate">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Regular Fiscal</h3>
+                    <p>Situação cadastral ativa e regular com todas as obrigações fiscais</p>
+                </div>
+                
+                <div class="cert-card animate">
+                    <i class="fas fa-building"></i>
+                    <h3>Alvará em Dia</h3>
+                    <p>Alvará de funcionamento regularizado com a Prefeitura de São Paulo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contato">
+        <div class="container">
+            <h2 class="animate">Precisa de materiais para sua obra?</h2>
+            <p class="animate">Entre em contato conosco e receba um atendimento personalizado com os melhores produtos para seu projeto.</p>
+            
+            <a href="https://wa.me/55114328XXXX" target="_blank" class="whatsapp-btn animate">
+                <i class="fab fa-whatsapp"></i> Fale conosco no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Mixmacro Ferragens</h3>
+                    <div class="company-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Nossa Sra. do Sabará, 3100 - Loja<br>Vila Emir - São Paulo/SP<br>CEP: 04447-010</p>
+                        <p><i class="fas fa-phone"></i> (11) 4328-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> otavio@mixmacro.com.br</p>
+                        <p><i class="fas fa-clock"></i> Seg-Sex: 8h-18h | Sáb: 8h-13h</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Início</a></li>
+                        <li><a href="#sobre"><i class="fas fa-chevron-right"></i> Sobre Nós</a></li>
+                        <li><a href="#produtos"><i class="fas fa-chevron-right"></i> Produtos</a></li>
+                        <li><a href="#localizacao"><i class="fas fa-chevron-right"></i> Localização</a></li>
+                        <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Serviços</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Produtos Principais</h3>
+                    <ul class="footer-links">
+                        <li><a href="#produtos"><i class="fas fa-chevron-right"></i> Ferragens</a></li>
+                        <li><a href="#produtos"><i class="fas fa-chevron-right"></i> Ferramentas</a></li>
+                        <li><a href="#produtos"><i class="fas fa-chevron-right"></i> Material Elétrico</a></li>
+                        <li><a href="#produtos"><i class="fas fa-chevron-right"></i> Material Hidráulico</a></li>
+                        <li><a href="#produtos"><i class="fas fa-chevron-right"></i> Diversos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Siga-nos</h3>
+                    <p style="margin-bottom: 20px; color: #BDC3C7;">Acompanhe nossas novidades e promoções</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <h3>Dados Empresariais</h3>
+                        <p style="font-size: 0.9rem; color: #BDC3C7; margin-top: 10px;">
+                            CNPJ: 18.102.316/0001-50<br>
+                            IE: 142.382.880.119<br>
+                            Razão Social: Otavio Alves de Oliveira Neto Ferragens e Ferramentas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2013-2024 Mixmacro Ferragens e Ferramentas - Todos os direitos reservados.</p>
+                <p style="margin-top: 10px;">Desenvolvido com ❤️ para atender São Paulo há mais de 12 anos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animações de entrada
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observar todos os elementos com classe animate
+        document.querySelectorAll('.animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Atualizar ano no copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.querySelector('.copyright');
+            if (yearSpan) {
+                const currentYear = new Date().getFullYear();
+                yearSpan.innerHTML = yearSpan.innerHTML.replace('2024', currentYear);
+            }
+        });
+
+        // Menu ativo
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const scrollPos = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
