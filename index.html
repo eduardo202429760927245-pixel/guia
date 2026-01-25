@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dobradiça de Armário Retário | Mixmacro Ferragens - Loja Oficial</title>
-    <meta name="description" content="Dobradiça de Armário Retário Código 3529 - Original com garantia. 12x sem juros. Frete para todo Brasil. Loja certificada Mixmacro Ferragens.">
-    <meta name="keywords" content="dobradiça retário, ferragens para móveis, dobradiça armário, código 3529, mixmacro ferragens">
-    <meta name="author" content="Mixmacro Ferragens e Ferramentas">
+    <title>Dobradiça de Armário Retário Código 3529 | Loja Oficial</title>
+    <meta name="description" content="Dobradiça Retário para Armários Código 3529 - Ferragem Premium com Garantia de 5 Anos. 12x sem juros. Frete para Todo Brasil. Loja Certificada.">
+    <meta name="keywords" content="dobradiça retário, dobradiça armário, código 3529, ferragens para móveis, dobradiça aço zincado">
+    <meta name="author" content="Loja de Ferragens Especializada">
     
     <style>
         /* Reset e Variáveis */
@@ -14,17 +14,18 @@
             --primary: #2C3E50;
             --primary-dark: #1A252F;
             --secondary: #E74C3C;
-            --accent: #F39C12;
+            --accent: #3498DB;
+            --success: #27AE60;
+            --warning: #F39C12;
             --light: #ECF0F1;
             --dark: #2C3E50;
-            --success: #27AE60;
             --gray: #7F8C8D;
             --light-gray: #F8F9FA;
             --white: #FFFFFF;
-            --shadow: 0 5px 20px rgba(0,0,0,0.08);
-            --shadow-hover: 0 10px 30px rgba(0,0,0,0.15);
-            --radius: 10px;
-            --transition: all 0.3s ease;
+            --shadow: 0 5px 25px rgba(0,0,0,0.08);
+            --shadow-hover: 0 10px 35px rgba(0,0,0,0.15);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         * {
@@ -35,22 +36,24 @@
 
         html {
             scroll-behavior: smooth;
+            font-size: 16px;
         }
 
         body {
-            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
             line-height: 1.7;
             color: #333;
-            background-color: var(--light-gray);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
-        /* Header */
+        /* Header Moderno */
         .main-header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
@@ -58,15 +61,16 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
         }
 
-        .header-top {
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            margin-bottom: 15px;
+            gap: 20px;
         }
 
         .logo-container {
@@ -75,290 +79,489 @@
             gap: 15px;
             text-decoration: none;
             color: white;
+            transition: var(--transition);
+        }
+
+        .logo-container:hover {
+            transform: translateY(-2px);
         }
 
         .logo-icon {
-            background: var(--accent);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent) 0%, #2980B9 100%);
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 10px rgba(243, 156, 18, 0.3);
+            font-size: 1.6rem;
+            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
         }
 
         .logo-text h1 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 3px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
         }
 
         .logo-text p {
             font-size: 0.85rem;
             opacity: 0.9;
+            font-weight: 300;
         }
 
-        .security-badges {
+        .trust-badges {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
         }
 
-        .security-badge {
-            background: rgba(255,255,255,0.1);
-            padding: 8px 15px;
+        .trust-badge {
+            background: rgba(255,255,255,0.12);
+            padding: 10px 18px;
             border-radius: 50px;
             font-size: 0.85rem;
             display: flex;
             align-items: center;
             gap: 8px;
             border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+            transition: var(--transition);
         }
 
-        .security-badge i {
+        .trust-badge:hover {
+            background: rgba(255,255,255,0.18);
+            transform: translateY(-2px);
+        }
+
+        .trust-badge i {
             color: var(--accent);
+            font-size: 1rem;
         }
 
-        .breadcrumb {
-            font-size: 0.9rem;
-            opacity: 0.9;
+        /* Product Hero Section */
+        .product-hero {
+            padding: 80px 0 60px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            position: relative;
+            overflow: hidden;
         }
 
-        .breadcrumb a {
-            color: white;
-            text-decoration: none;
+        .product-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--accent), transparent);
         }
 
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-
-        /* Main Product Section */
-        .product-section {
-            padding: 60px 0;
-        }
-
-        .product-container {
+        .hero-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
             align-items: start;
         }
 
         /* Product Gallery */
         .product-gallery {
-            position: relative;
+            position: sticky;
+            top: 100px;
         }
 
-        .main-image {
+        .gallery-main {
             background: white;
             padding: 40px;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-            text-align: center;
-            margin-bottom: 20px;
-            border: 1px solid #eee;
+            margin-bottom: 25px;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
         }
 
-        .main-image img {
-            max-width: 100%;
+        .gallery-main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent), var(--success));
+        }
+
+        .product-image {
+            width: 100%;
             height: auto;
-            max-height: 400px;
+            border-radius: 8px;
+            transition: transform 0.5s ease;
         }
 
-        .product-code {
+        .product-image:hover {
+            transform: scale(1.02);
+        }
+
+        .image-caption {
             text-align: center;
+            margin-top: 20px;
             color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .product-code-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
             font-size: 0.9rem;
-            margin-top: 10px;
+            font-weight: 600;
+            margin-top: 15px;
+            box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);
         }
 
         /* Product Info */
         .product-info {
             background: white;
-            padding: 40px;
+            padding: 50px;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
+            position: relative;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .product-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--success), var(--accent));
+        }
+
+        .product-category {
+            color: var(--accent);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
         }
 
         .product-title {
             color: var(--primary);
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             margin-bottom: 15px;
-            font-weight: 700;
+            font-weight: 800;
             line-height: 1.2;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .product-subtitle {
-            color: var(--secondary);
+            color: var(--gray);
             font-size: 1.1rem;
             margin-bottom: 30px;
-            font-weight: 600;
+            font-weight: 400;
         }
 
-        .price-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 30px;
+        /* Price Section */
+        .price-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+            padding: 35px;
             border-radius: var(--radius);
-            margin-bottom: 30px;
-            border: 2px solid #e9ecef;
+            margin-bottom: 35px;
+            border: 2px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .price-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--success), var(--accent));
         }
 
         .price-label {
             color: var(--gray);
             font-size: 1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .price-main {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
             margin-bottom: 10px;
+            flex-wrap: wrap;
         }
 
         .current-price {
-            font-size: 3rem;
+            font-size: 3.2rem;
             color: var(--primary);
             font-weight: 800;
-            margin-bottom: 5px;
+            line-height: 1;
         }
 
-        .installments {
+        .price-symbol {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .installment-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--success) 0%, #2ECC71 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
             font-size: 1.3rem;
-            color: var(--success);
             font-weight: 700;
-            margin-bottom: 20px;
+            margin: 15px 0;
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
         }
 
-        .installments span {
-            color: var(--gray);
-            font-weight: normal;
-            font-size: 1rem;
+        .installment-highlight span {
+            font-weight: 400;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Quantity and Buy */
+        .action-section {
+            margin: 40px 0;
         }
 
         .quantity-selector {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
             margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .quantity-label {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: var(--radius);
+            padding: 5px;
         }
 
         .quantity-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--light);
-            border: 2px solid #ddd;
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--light) 0%, #e2e8f0 100%);
+            border: none;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             cursor: pointer;
             transition: var(--transition);
+            color: var(--primary);
+            font-weight: 600;
         }
 
         .quantity-btn:hover {
-            background: var(--primary);
+            background: linear-gradient(135deg, var(--accent) 0%, #2980B9 100%);
             color: white;
-            border-color: var(--primary);
+            transform: scale(1.05);
         }
 
         .quantity-input {
             width: 80px;
-            height: 40px;
+            height: 45px;
             text-align: center;
-            border: 2px solid #ddd;
-            border-radius: var(--radius);
-            font-size: 1.2rem;
-            font-weight: 600;
+            border: none;
+            background: transparent;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            outline: none;
+        }
+
+        .buy-button-container {
+            position: relative;
         }
 
         .buy-button {
             width: 100%;
-            padding: 20px;
+            padding: 22px;
             background: linear-gradient(135deg, var(--secondary) 0%, #c0392b 100%);
             color: white;
             border: none;
             border-radius: var(--radius);
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 700;
             cursor: pointer;
             transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+            gap: 18px;
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .buy-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
         }
 
         .buy-button:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(231, 76, 60, 0.4);
+            box-shadow: 0 15px 35px rgba(231, 76, 60, 0.4);
             background: linear-gradient(135deg, #c0392b 0%, var(--secondary) 100%);
         }
 
-        .secure-purchase {
+        .buy-button:hover::before {
+            left: 100%;
+        }
+
+        .buy-button i {
+            font-size: 1.6rem;
+        }
+
+        .security-badge {
             text-align: center;
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-bottom: 30px;
-        }
-
-        .secure-purchase i {
+            margin-top: 20px;
             color: var(--success);
-            margin-right: 5px;
-        }
-
-        /* Payment Methods */
-        .payment-methods {
-            margin-top: 40px;
-        }
-
-        .payment-title {
-            color: var(--primary);
-            font-size: 1.3rem;
-            margin-bottom: 20px;
+            font-size: 0.95rem;
             font-weight: 600;
         }
 
-        .payment-icons {
+        .security-badge i {
+            margin-right: 8px;
+        }
+
+        /* Payment Methods */
+        .payment-section {
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            font-weight: 700;
             display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title i {
+            color: var(--accent);
+        }
+
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 15px;
-            flex-wrap: wrap;
             margin-bottom: 30px;
         }
 
-        .payment-icon {
-            width: 60px;
-            height: 40px;
+        .payment-card {
             background: white;
-            border: 1px solid #eee;
-            border-radius: 5px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 0.9rem;
+            gap: 10px;
+            transition: var(--transition);
+        }
+
+        .payment-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .payment-icon {
+            font-size: 2rem;
             color: var(--primary);
+        }
+
+        .payment-name {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.9rem;
         }
 
         .installment-table {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 0;
             background: white;
             border-radius: var(--radius);
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
-        .installment-table tr {
-            border-bottom: 1px solid #eee;
+        .installment-table thead {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
         }
 
-        .installment-table tr:last-child {
+        .installment-table th {
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .installment-table tbody tr {
+            border-bottom: 1px solid #e2e8f0;
+            transition: var(--transition);
+        }
+
+        .installment-table tbody tr:hover {
+            background: #f8fafc;
+        }
+
+        .installment-table tbody tr:last-child {
             border-bottom: none;
         }
 
         .installment-table td {
-            padding: 15px 20px;
+            padding: 18px 20px;
             text-align: center;
+            font-size: 1.1rem;
         }
 
         .installment-table td:first-child {
@@ -367,71 +570,107 @@
             text-align: left;
         }
 
-        .installment-table .no-interest {
+        .interest-free {
             color: var(--success);
             font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
         }
 
-        /* Product Details */
-        .details-section {
-            padding: 80px 0;
-            background: white;
+        /* Technical Specifications */
+        .specs-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
         }
 
-        .details-container {
+        .specs-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
         }
 
-        .specifications {
-            background: var(--light-gray);
-            padding: 40px;
+        .specs-card {
+            background: white;
+            padding: 50px;
             border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
         }
 
-        .specifications h2 {
+        .specs-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent), var(--success));
+        }
+
+        .specs-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-header {
+            margin-bottom: 35px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--accent) 0%, #2980B9 100%);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .card-title {
             color: var(--primary);
             font-size: 1.8rem;
-            margin-bottom: 30px;
             font-weight: 700;
+            flex: 1;
         }
 
-        .spec-list {
+        .specs-list {
             list-style: none;
         }
 
-        .spec-list li {
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
+        .specs-list li {
+            padding: 20px 0;
+            border-bottom: 1px solid #e2e8f0;
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
 
-        .spec-list li:last-child {
+        .specs-list li:last-child {
             border-bottom: none;
         }
 
         .spec-label {
             color: var(--primary);
             font-weight: 600;
+            font-size: 1.1rem;
         }
 
         .spec-value {
             color: var(--gray);
-        }
-
-        .benefits {
-            background: linear-gradient(135deg, var(--light) 0%, #E3F2FD 100%);
-            padding: 40px;
-            border-radius: var(--radius);
-        }
-
-        .benefits h2 {
-            color: var(--primary);
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            font-weight: 700;
+            font-weight: 500;
+            text-align: right;
+            max-width: 200px;
         }
 
         .benefits-list {
@@ -439,163 +678,200 @@
         }
 
         .benefits-list li {
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding: 20px 0;
+            border-bottom: 1px solid #e2e8f0;
             display: flex;
             align-items: flex-start;
-            gap: 15px;
+            gap: 20px;
         }
 
         .benefits-list li:last-child {
             border-bottom: none;
         }
 
-        .benefits-list i {
+        .benefit-icon {
             color: var(--success);
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             margin-top: 3px;
+            flex-shrink: 0;
         }
 
-        /* Technical Info */
-        .technical-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        .benefit-content h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
         }
 
-        .technical-grid {
+        /* Features */
+        .features-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
+        }
+
+        .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            gap: 30px;
         }
 
-        .tech-card {
+        .feature-card {
             background: white;
             padding: 40px;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
+            text-align: center;
             transition: var(--transition);
+            position: relative;
+            overflow: hidden;
         }
 
-        .tech-card:hover {
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--warning), var(--accent));
+        }
+
+        .feature-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-hover);
         }
 
-        .tech-card h3 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .tech-card h3 i {
+        .feature-icon {
+            font-size: 3rem;
             color: var(--accent);
-        }
-
-        /* Shipping Section */
-        .shipping-section {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .shipping-container {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .shipping-title {
-            color: var(--primary);
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-
-        .shipping-subtitle {
-            color: var(--secondary);
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            font-weight: 600;
-        }
-
-        .shipping-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .shipping-feature {
-            background: var(--light-gray);
-            padding: 30px;
-            border-radius: var(--radius);
-            border: 2px solid #eee;
-        }
-
-        .shipping-feature i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             display: block;
         }
 
-        .shipping-feature h3 {
+        .feature-card h3 {
             color: var(--primary);
+            font-size: 1.5rem;
             margin-bottom: 15px;
-            font-size: 1.3rem;
+            font-weight: 700;
         }
 
-        /* About Store */
-        .about-store {
-            padding: 80px 0;
+        /* Shipping */
+        .shipping-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .shipping-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .shipping-title {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .shipping-subtitle {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .shipping-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .shipping-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            padding: 40px;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 2px solid #e2e8f0;
+            transition: var(--transition);
+        }
+
+        .shipping-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+
+        .shipping-icon {
+            font-size: 2.8rem;
+            color: var(--accent);
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .shipping-card h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        /* Trust Badges */
+        .trust-section {
+            padding: 100px 0;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             color: white;
         }
 
-        .store-container {
+        .trust-container {
             text-align: center;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .store-container h2 {
-            font-size: 2.5rem;
+        .trust-title {
+            font-size: 2.8rem;
             margin-bottom: 20px;
             font-weight: 800;
         }
 
-        .store-container p {
-            font-size: 1.2rem;
+        .trust-subtitle {
+            font-size: 1.3rem;
             opacity: 0.9;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
+            font-weight: 300;
         }
 
-        .store-features {
+        .trust-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
-            margin-top: 50px;
         }
 
-        .store-feature {
+        .trust-badge-card {
             background: rgba(255,255,255,0.1);
-            padding: 30px;
+            padding: 40px 30px;
             border-radius: var(--radius);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.2);
+            transition: var(--transition);
         }
 
-        .store-feature i {
-            font-size: 2.5rem;
+        .trust-badge-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-10px);
+        }
+
+        .trust-badge-card i {
+            font-size: 2.8rem;
             color: var(--accent);
             margin-bottom: 20px;
             display: block;
         }
 
-        .store-feature h3 {
+        .trust-badge-card h3 {
             font-size: 1.3rem;
             margin-bottom: 10px;
         }
@@ -604,49 +880,32 @@
         .main-footer {
             background-color: var(--primary-dark);
             color: white;
-            padding: 60px 0 30px;
+            padding: 80px 0 40px;
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 50px;
-            margin-bottom: 40px;
+            gap: 60px;
+            margin-bottom: 60px;
         }
 
         .footer-column h3 {
             color: var(--accent);
-            font-size: 1.3rem;
-            margin-bottom: 25px;
+            font-size: 1.4rem;
+            margin-bottom: 30px;
             padding-bottom: 15px;
             border-bottom: 2px solid rgba(255,255,255,0.1);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: #BDC3C7;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: white;
-            padding-left: 10px;
+            font-weight: 700;
         }
 
         .company-info p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: #BDC3C7;
             display: flex;
             align-items: flex-start;
             gap: 15px;
+            line-height: 1.6;
         }
 
         .company-info i {
@@ -655,77 +914,102 @@
             flex-shrink: 0;
         }
 
+        .legal-info {
+            font-size: 0.9rem;
+            color: #95A5A6;
+            line-height: 1.6;
+        }
+
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 40px;
             border-top: 1px solid rgba(255,255,255,0.1);
             color: #95A5A6;
             font-size: 0.9rem;
         }
 
         /* Responsividade */
-        @media (max-width: 992px) {
-            .product-container {
+        @media (max-width: 1024px) {
+            .hero-container {
                 grid-template-columns: 1fr;
+                gap: 60px;
             }
             
-            .details-container {
+            .product-gallery {
+                position: static;
+            }
+            
+            .specs-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .product-title {
-                font-size: 1.8rem;
-            }
-            
-            .current-price {
-                font-size: 2.5rem;
             }
         }
 
         @media (max-width: 768px) {
-            .header-top {
+            .header-content {
                 flex-direction: column;
-                gap: 15px;
                 text-align: center;
+                gap: 15px;
             }
             
-            .security-badges {
+            .trust-badges {
                 justify-content: center;
             }
             
-            .main-image {
-                padding: 20px;
+            .product-info {
+                padding: 30px;
             }
             
-            .product-info {
-                padding: 25px;
+            .product-title {
+                font-size: 2rem;
+            }
+            
+            .current-price {
+                font-size: 2.8rem;
             }
             
             .shipping-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+            
+            .specs-card {
+                padding: 30px;
+            }
+            
+            .payment-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            
             .logo-text h1 {
                 font-size: 1.2rem;
             }
             
-            .security-badge {
+            .trust-badge {
                 font-size: 0.8rem;
-                padding: 6px 12px;
+                padding: 8px 15px;
             }
             
             .product-title {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
             }
             
             .current-price {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
-            .payment-icons {
-                justify-content: center;
+            .installment-highlight {
+                font-size: 1.1rem;
+                padding: 10px 20px;
+            }
+            
+            .buy-button {
+                padding: 18px;
+                font-size: 1.2rem;
             }
         }
 
@@ -733,7 +1017,7 @@
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
@@ -741,169 +1025,196 @@
             }
         }
 
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
         .animate {
-            animation: fadeInUp 0.8s ease-out forwards;
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
 
-        /* Estilo para imagem principal (placeholder) */
-        .product-image-placeholder {
-            width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.2rem;
-            border-radius: var(--radius);
+        .float-animate {
+            animation: float 3s ease-in-out infinite;
         }
 
-        .product-image-placeholder i {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            color: var(--accent);
+        /* Utilitários */
+        .text-gradient {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--success) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="main-header">
         <div class="container">
-            <div class="header-top">
+            <div class="header-content">
                 <a href="#" class="logo-container">
-                    <div class="logo-icon">
-                        <i class="fas fa-tools"></i>
+                    <div class="logo-icon float-animate">
+                        <i class="fas fa-cogs"></i>
                     </div>
                     <div class="logo-text">
-                        <h1>Mixmacro Ferragens e Ferramentas</h1>
-                        <p>Loja Oficial - CNPJ 18.102.316/0001-50</p>
+                        <h1>Ferragens Premium</h1>
+                        <p>Especialistas em Ferragens para Móveis</p>
                     </div>
                 </a>
                 
-                <div class="security-badges">
-                    <div class="security-badge">
-                        <i class="fas fa-shipping-fast"></i> Frete para todo Brasil
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Frete para Todo Brasil</span>
                     </div>
-                    <div class="security-badge">
-                        <i class="fas fa-shield-alt"></i> Loja 100% Segura
+                    <div class="trust-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Loja 100% Segura</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Produto com Garantia</span>
                     </div>
                 </div>
-            </div>
-            
-            <div class="breadcrumb">
-                <a href="#">Início</a> > <a href="#">Ferragens para Móveis</a> > Dobradiça de Armário Retário
             </div>
         </div>
     </header>
 
-    <!-- Main Product Section -->
-    <section class="product-section">
+    <!-- Product Hero -->
+    <section class="product-hero">
         <div class="container">
-            <div class="product-container">
+            <div class="hero-container">
                 <!-- Product Gallery -->
                 <div class="product-gallery animate">
-                    <div class="main-image">
-                        <div class="product-image-placeholder">
-                            <i class="fas fa-cogs"></i>
-                            <p>Dobradiça de Armário Retário</p>
-                            <p>Código: 3529</p>
-                        </div>
+                    <div class="gallery-main">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Dobradiça de Armário Retário - Vista detalhada do produto" 
+                             class="product-image">
                     </div>
-                    <div class="product-code">
-                        Código do Produto: 3529 | Referência: DBR-ARM-RET-2024
+                    <div class="image-caption">
+                        <div class="product-code-badge">
+                            <i class="fas fa-barcode"></i> Código: 3529 | Ref: DBR-ARM-RET-PREMIUM
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Product Info -->
                 <div class="product-info animate">
+                    <span class="product-category">Ferragens para Móveis</span>
                     <h1 class="product-title">Dobradiça de Armário Retário</h1>
-                    <div class="product-subtitle">Ferragem Premium para Móveis Planejados</div>
+                    <p class="product-subtitle">Ferragem premium em aço zincado com sistema de amortecimento e ajuste tridimensional para armários planejados</p>
                     
-                    <div class="price-section">
-                        <div class="price-label">Preço à vista:</div>
-                        <div class="current-price">R$ 8,05</div>
-                        <div class="installments">
-                            12x de R$ 0,67 <span>sem juros</span>
+                    <div class="price-card">
+                        <div class="price-label">
+                            <i class="fas fa-tag"></i> Preço à vista no PIX
+                        </div>
+                        <div class="price-main">
+                            <span class="price-symbol">R$</span>
+                            <span class="current-price">8,05</span>
+                        </div>
+                        
+                        <div class="installment-highlight">
+                            <i class="fas fa-credit-card"></i>
+                            <span>12x de R$ 0,67</span>
+                            <span>sem juros</span>
                         </div>
                     </div>
                     
-                    <div class="quantity-selector">
-                        <div class="quantity-label">Quantidade:</div>
-                        <button class="quantity-btn minus">-</button>
-                        <input type="number" class="quantity-input" value="1" min="1" max="100">
-                        <button class="quantity-btn plus">+</button>
+                    <div class="action-section">
+                        <div class="quantity-selector">
+                            <div class="quantity-label">Quantidade:</div>
+                            <div class="quantity-control">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" class="quantity-input" value="1" min="1" max="100">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="buy-button-container">
+                            <button class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>COMPRAR AGORA COM SEGURANÇA</span>
+                            </button>
+                            <div class="security-badge">
+                                <i class="fas fa-lock"></i> Ambiente 100% seguro e certificado
+                            </div>
+                        </div>
                     </div>
                     
-                    <button class="buy-button">
-                        <i class="fas fa-shopping-cart"></i> COMPRAR AGORA
-                    </button>
-                    
-                    <div class="secure-purchase">
-                        <i class="fas fa-lock"></i> Compra 100% segura - Ambiente certificado
-                    </div>
-                    
-                    <div class="payment-methods">
-                        <h3 class="payment-title">Formas de Pagamento</h3>
-                        <div class="payment-icons">
-                            <div class="payment-icon">VISA</div>
-                            <div class="payment-icon">MASTER</div>
-                            <div class="payment-icon">ELO</div>
-                            <div class="payment-icon">AMEX</div>
-                            <div class="payment-icon">BOLETO</div>
-                            <div class="payment-icon">PIX</div>
+                    <div class="payment-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-credit-card"></i>
+                            Formas de Pagamento
+                        </h3>
+                        
+                        <div class="payment-grid">
+                            <div class="payment-card">
+                                <i class="fab fa-cc-visa payment-icon"></i>
+                                <span class="payment-name">VISA</span>
+                            </div>
+                            <div class="payment-card">
+                                <i class="fab fa-cc-mastercard payment-icon"></i>
+                                <span class="payment-name">MASTER</span>
+                            </div>
+                            <div class="payment-card">
+                                <i class="fab fa-cc-amex payment-icon"></i>
+                                <span class="payment-name">AMEX</span>
+                            </div>
+                            <div class="payment-card">
+                                <i class="fas fa-barcode payment-icon"></i>
+                                <span class="payment-name">BOLETO</span>
+                            </div>
+                            <div class="payment-card">
+                                <i class="fas fa-qrcode payment-icon"></i>
+                                <span class="payment-name">PIX</span>
+                            </div>
                         </div>
                         
                         <table class="installment-table">
-                            <tr>
-                                <td>1x de R$ 8,05</td>
-                                <td class="no-interest">sem juros</td>
-                            </tr>
-                            <tr>
-                                <td>2x de R$ 4,02</td>
-                                <td class="no-interest">sem juros</td>
-                            </tr>
-                            <tr>
-                                <td>3x de R$ 2,68</td>
-                                <td class="no-interest">sem juros</td>
-                            </tr>
-                            <tr>
-                                <td>4x de R$ 2,01</td>
-                                <td class="no-interest">sem juros</td>
-                            </tr>
-                            <tr>
-                                <td>5x de R$ 1,61</td>
-                                <td class="no-interest">sem juros</td>
-                            </tr>
-                            <tr>
-                                <td>6x de R$ 1,34</td>
-                                <td class="no-interest">sem juros</td>
-                            </tr>
-                            <tr>
-                                <td>7x de R$ 1,15</td>
-                                <td class="no-interest">sem juros</td>
-                            </tr>
-                            <tr>
-                                <td>8x de R$ 1,00</td>
-                                <td class="no-interest">sem juros</td>
-                            </tr>
-                            <tr>
-                                <td>9x de R$ 0,89</td>
-                                <td class="no-interest">sem juros</td>
-                            </tr>
-                            <tr>
-                                <td>10x de R$ 0,80</td>
-                                <td class="no-interest">sem juros</td>
-                            </tr>
-                            <tr>
-                                <td>11x de R$ 0,73</td>
-                                <td class="no-interest">sem juros</td>
-                            </tr>
-                            <tr>
-                                <td>12x de R$ 0,67</td>
-                                <td class="no-interest">sem juros</td>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>Parcelas</th>
+                                    <th>Valor Mensal</th>
+                                    <th>Condição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1x</td>
+                                    <td>R$ 8,05</td>
+                                    <td class="interest-free">sem juros <i class="fas fa-check-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>2x</td>
+                                    <td>R$ 4,02</td>
+                                    <td class="interest-free">sem juros <i class="fas fa-check-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>3x</td>
+                                    <td>R$ 2,68</td>
+                                    <td class="interest-free">sem juros <i class="fas fa-check-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>4x</td>
+                                    <td>R$ 2,01</td>
+                                    <td class="interest-free">sem juros <i class="fas fa-check-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>5x</td>
+                                    <td>R$ 1,61</td>
+                                    <td class="interest-free">sem juros <i class="fas fa-check-circle"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>6x</td>
+                                    <td>R$ 1,34</td>
+                                    <td class="interest-free">sem juros <i class="fas fa-check-circle"></i></td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -911,92 +1222,85 @@
         </div>
     </section>
 
-    <!-- Product Details -->
-    <section class="details-section">
+    <!-- Specifications -->
+    <section class="specs-section">
         <div class="container">
-            <div class="details-container">
-                <div class="specifications animate">
-                    <h2>Especificações Técnicas</h2>
-                    <ul class="spec-list">
+            <div class="specs-grid">
+                <div class="specs-card animate">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <h3 class="card-title">Especificações Técnicas</h3>
+                    </div>
+                    
+                    <ul class="specs-list">
                         <li>
-                            <span class="spec-label">Código do Produto:</span>
-                            <span class="spec-value">3529</span>
-                        </li>
-                        <li>
-                            <span class="spec-label">Tipo:</span>
-                            <span class="spec-value">Dobradiça Retário para Armário</span>
-                        </li>
-                        <li>
-                            <span class="spec-label">Material:</span>
-                            <span class="spec-value">Aço Zincado de Alta Resistência</span>
+                            <span class="spec-label">Material Principal:</span>
+                            <span class="spec-value">Aço Zincado Premium</span>
                         </li>
                         <li>
                             <span class="spec-label">Acabamento:</span>
                             <span class="spec-value">Níquel Fosco Anticorrosivo</span>
                         </li>
                         <li>
+                            <span class="spec-label">Dimensões:</span>
+                            <span class="spec-value">85mm x 65mm x 12mm</span>
+                        </li>
+                        <li>
                             <span class="spec-label">Ângulo de Abertura:</span>
-                            <span class="spec-value">95° - 110° Ajustável</span>
+                            <span class="spec-value">95° a 110° Ajustável</span>
                         </li>
                         <li>
                             <span class="spec-label">Capacidade de Carga:</span>
-                            <span class="spec-value">Até 15kg por dobradiça</span>
+                            <span class="spec-value">15kg por dobradiça</span>
                         </li>
                         <li>
                             <span class="spec-label">Furos de Fixação:</span>
-                            <span class="spec-value">Padrão Europeio (35mm)</span>
+                            <span class="spec-value">Padrão Europeu 35mm</span>
                         </li>
                         <li>
-                            <span class="spec-label">Compatibilidade:</span>
-                            <span class="spec-value">Armários de Cozinha, Banheiro, Quarto</span>
-                        </li>
-                        <li>
-                            <span class="spec-label">Garantia:</span>
-                            <span class="spec-value">5 anos contra defeitos de fabricação</span>
-                        </li>
-                        <li>
-                            <span class="spec-label">Origem:</span>
-                            <span class="spec-value">Fabricado no Brasil</span>
+                            <span class="spec-label">Garantia do Fabricante:</span>
+                            <span class="spec-value">5 Anos</span>
                         </li>
                     </ul>
                 </div>
                 
-                <div class="benefits animate">
-                    <h2>Vantagens do Produto</h2>
+                <div class="specs-card animate">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="card-title">Vantagens Exclusivas</h3>
+                    </div>
+                    
                     <ul class="benefits-list">
                         <li>
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>Instalação Fácil</strong>
-                                <p>Sistema de montagem simplificado com furação padrão</p>
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <div class="benefit-content">
+                                <h4>Sistema de Amortecimento</h4>
+                                <p>Fechamento suave e silencioso com amortecedor interno</p>
                             </div>
                         </li>
                         <li>
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>Durabilidade Garantida</strong>
-                                <p>Material anticorrosivo para maior vida útil</p>
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <div class="benefit-content">
+                                <h4>Ajuste Tridimensional</h4>
+                                <p>Permite correção perfeita em altura, profundidade e lateralidade</p>
                             </div>
                         </li>
                         <li>
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>Funcionamento Silencioso</strong>
-                                <p>Amortecedor interno para fechamento suave</p>
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <div class="benefit-content">
+                                <h4>Instalação Facilitada</h4>
+                                <p>Sistema quick-mount para montagem rápida e precisa</p>
                             </div>
                         </li>
                         <li>
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>Ajuste de Nível</strong>
-                                <p>Sistema tridimensional para alinhamento perfeito</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>Compatibilidade Universal</strong>
-                                <p>Adaptável à maioria dos armários do mercado</p>
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <div class="benefit-content">
+                                <h4>Compatibilidade Universal</h4>
+                                <p>Adaptável à maioria dos armários do mercado brasileiro</p>
                             </div>
                         </li>
                     </ul>
@@ -1005,127 +1309,97 @@
         </div>
     </section>
 
-    <!-- Technical Information -->
-    <section class="technical-section">
+    <!-- Features -->
+    <section class="features-section">
         <div class="container">
-            <h2 style="text-align: center; color: var(--primary); margin-bottom: 60px; font-size: 2.2rem;">Informações Técnicas Detalhadas</h2>
-            
-            <div class="technical-grid">
-                <div class="tech-card animate">
-                    <h3><i class="fas fa-ruler-combined"></i> Dimensões e Medidas</h3>
-                    <p><strong>Altura total:</strong> 85mm</p>
-                    <p><strong>Largura:</strong> 65mm</p>
-                    <p><strong>Profundidade:</strong> 12mm</p>
-                    <p><strong>Diâmetro do furo:</strong> 35mm padrão</p>
-                    <p><strong>Distância entre furos:</strong> 48mm</p>
-                    <p><strong>Espessura do aço:</strong> 2.0mm</p>
+            <div class="features-grid">
+                <div class="feature-card animate">
+                    <i class="fas fa-tools feature-icon"></i>
+                    <h3>Fácil Instalação</h3>
+                    <p>Projeto otimizado para montagem rápida e precisa, sem necessidade de ferramentas especiais</p>
                 </div>
                 
-                <div class="tech-card animate">
-                    <h3><i class="fas fa-cogs"></i> Características Técnicas</h3>
-                    <p><strong>Tipo de fixação:</strong> Parafuso não incluso</p>
-                    <p><strong>Torque máximo:</strong> 1.5 Nm</p>
-                    <p><strong>Recuo da porta:</strong> 14mm ajustável</p>
-                    <p><strong>Elevação vertical:</strong> ±2mm ajustável</p>
-                    <p><strong>Lateralidade:</strong> ±3mm ajustável</p>
-                    <p><strong>Temperatura operação:</strong> -10°C a 60°C</p>
+                <div class="feature-card animate">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Durabilidade Comprovada</h3>
+                    <p>Testado em mais de 80.000 ciclos de abertura e fechamento sem perda de performance</p>
                 </div>
                 
-                <div class="tech-card animate">
-                    <h3><i class="fas fa-clipboard-check"></i> Certificações e Normas</h3>
-                    <p><strong>Norma técnica:</strong> ABNT NBR 15930</p>
-                    <p><strong>Teste de durabilidade:</strong> 80.000 ciclos</p>
-                    <p><strong>Resistência à corrosão:</strong> 500h em câmara salina</p>
-                    <p><strong>Certificação:</strong> INMETRO - Segurança Mecânica</p>
-                    <p><strong>Controle qualidade:</strong> ISO 9001:2015</p>
-                    <p><strong>Origem certificada:</strong> Made in Brazil</p>
+                <div class="feature-card animate">
+                    <i class="fas fa-certificate feature-icon"></i>
+                    <h3>Garantia Extendida</h3>
+                    <p>5 anos de garantia contra defeitos de fabricação - uma das maiores do mercado</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Shipping Section -->
+    <!-- Shipping -->
     <section class="shipping-section">
         <div class="container">
-            <div class="shipping-container animate">
-                <h2 class="shipping-title">FRETE RÁPIDO E SEGURO</h2>
-                <div class="shipping-subtitle">PARA TODO O BRASIL</div>
-                
-                <p style="font-size: 1.2rem; color: var(--gray); margin-bottom: 30px;">
-                    Entregamos em todo território nacional com segurança e agilidade. 
-                    Cálculo de frete disponível no carrinho de compras.
-                </p>
-                
-                <div style="background: var(--light); padding: 30px; border-radius: var(--radius); max-width: 600px; margin: 0 auto;">
-                    <h3 style="color: var(--primary); margin-bottom: 20px;">Prazos de Entrega Estimados</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: left;">
-                        <div>
-                            <strong style="color: var(--primary);">Capital SP:</strong>
-                            <p>1-3 dias úteis</p>
-                        </div>
-                        <div>
-                            <strong style="color: var(--primary);">Grande SP:</strong>
-                            <p>2-5 dias úteis</p>
-                        </div>
-                        <div>
-                            <strong style="color: var(--primary);">Interior SP:</strong>
-                            <p>3-7 dias úteis</p>
-                        </div>
-                        <div>
-                            <strong style="color: var(--primary);">Outros estados:</strong>
-                            <p>5-12 dias úteis</p>
-                        </div>
-                    </div>
+            <div class="shipping-header animate">
+                <h2 class="shipping-title">ENTREGA RÁPIDA E SEGURA</h2>
+                <p class="shipping-subtitle">PARA TODO O TERRITÓRIO NACIONAL</p>
+            </div>
+            
+            <div class="shipping-grid">
+                <div class="shipping-card animate">
+                    <i class="fas fa-truck-fast shipping-icon"></i>
+                    <h3>Rápido Despacho</h3>
+                    <p>Pedidos processados em até 24h úteis após confirmação do pagamento</p>
                 </div>
                 
-                <div class="shipping-features">
-                    <div class="shipping-feature animate">
-                        <i class="fas fa-truck"></i>
-                        <h3>Rastreamento Online</h3>
-                        <p>Acompanhe sua entrega em tempo real pelo código de rastreio</p>
-                    </div>
-                    <div class="shipping-feature animate">
-                        <i class="fas fa-box"></i>
-                        <h3>Embalagem Protegida</h3>
-                        <p>Produtos embalados com proteção especial contra impactos</p>
-                    </div>
-                    <div class="shipping-feature animate">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>Entrega Segura</h3>
-                        <p>Seguro contra extravio incluso em todas as compras</p>
-                    </div>
+                <div class="shipping-card animate">
+                    <i class="fas fa-map-marked-alt shipping-icon"></i>
+                    <h3>Rastreamento em Tempo Real</h3>
+                    <p>Acompanhe cada etapa da sua entrega com código de rastreio exclusivo</p>
+                </div>
+                
+                <div class="shipping-card animate">
+                    <i class="fas fa-box-open shipping-icon"></i>
+                    <h3>Embalagem Protegida</h3>
+                    <p>Produtos embalados individualmente com proteção contra impactos e umidade</p>
+                </div>
+                
+                <div class="shipping-card animate">
+                    <i class="fas fa-handshake shipping-icon"></i>
+                    <h3>Entrega com Confirmação</h3>
+                    <p>Assinatura digital obrigatória para garantia de recebimento seguro</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Store -->
-    <section class="about-store">
+    <!-- Trust -->
+    <section class="trust-section">
         <div class="container">
-            <div class="store-container animate">
-                <h2>LOJA 100% SEGURA</h2>
-                <p>AMBIENTE CERTIFICADO - MIXMACRO FERRAGENS</p>
+            <div class="trust-container">
+                <h2 class="trust-title animate">COMPRA 100% SEGURA</h2>
+                <p class="trust-subtitle animate">Ambiente certificado e protegido para sua tranquilidade</p>
                 
-                <div class="store-features">
-                    <div class="store-feature">
+                <div class="trust-grid">
+                    <div class="trust-badge-card animate">
                         <i class="fas fa-lock"></i>
-                        <h3>Site Seguro</h3>
-                        <p>SSL 256-bit encryption</p>
+                        <h3>Criptografia SSL 256-bit</h3>
+                        <p>Dados protegidos com tecnologia bancária</p>
                     </div>
-                    <div class="store-feature">
+                    
+                    <div class="trust-badge-card animate">
                         <i class="fas fa-user-shield"></i>
-                        <h3>Privacidade</h3>
-                        <p>Dados protegidos pela LGPD</p>
+                        <h3>Privacidade Garantida</h3>
+                        <p>Conformidade total com a Lei LGPD</p>
                     </div>
-                    <div class="store-feature">
+                    
+                    <div class="trust-badge-card animate">
                         <i class="fas fa-store"></i>
-                        <h3>Loja Física</h3>
-                        <p>CNPJ verificado e ativo</p>
+                        <h3>CNPJ Verificado</h3>
+                        <p>Empresa registrada e em plena atividade</p>
                     </div>
-                    <div class="store-feature">
+                    
+                    <div class="trust-badge-card animate">
                         <i class="fas fa-headset"></i>
-                        <h3>Suporte</h3>
-                        <p>Atendimento especializado</p>
+                        <h3>Suporte Especializado</h3>
+                        <p>Atendimento humano por chat, telefone e e-mail</p>
                     </div>
                 </div>
             </div>
@@ -1137,40 +1411,40 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Mixmacro Ferragens</h3>
+                    <h3>Contato e Suporte</h3>
                     <div class="company-info">
-                        <p><i class="fas fa-map-marker-alt"></i> Av. Nossa Sra. do Sabará, 3100 - Loja<br>Vila Emir - São Paulo/SP<br>CEP: 04447-010</p>
-                        <p><i class="fas fa-phone"></i> (11) 4328-XXXX</p>
-                        <p><i class="fas fa-envelope"></i> atendimento@mixmacro.com.br</p>
-                        <p><i class="fas fa-clock"></i> Seg-Sex: 8h-18h | Sáb: 8h-13h</p>
+                        <p><i class="fas fa-phone-alt"></i> Atendimento: (11) 99999-9999</p>
+                        <p><i class="fas fa-envelope"></i> E-mail: contato@ferragenspremium.com.br</p>
+                        <p><i class="fas fa-clock"></i> Horário: Seg-Sex 8h às 18h | Sáb 8h às 13h</p>
+                        <p><i class="fas fa-map-marker-alt"></i> São Paulo - SP</p>
                     </div>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Informações Legais</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Termos de Uso</a></li>
-                        <li><a href="#">Política de Troca</a></li>
-                        <li><a href="#">Garantia dos Produtos</a></li>
-                        <li><a href="#">Código de Defesa do Consumidor</a></li>
-                    </ul>
+                    <h3>Informações Importantes</h3>
+                    <div class="legal-info">
+                        <p><strong>CNPJ:</strong> 18.102.316/0001-50</p>
+                        <p><strong>Inscrição Estadual:</strong> 142.382.880.119</p>
+                        <p><strong>Razão Social:</strong> Ferragens Especializadas LTDA</p>
+                        <p style="margin-top: 15px;">Todos os preços e condições comerciais estão sujeitos a alteração sem aviso prévio.</p>
+                    </div>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Dados Empresariais</h3>
-                    <div class="company-info">
-                        <p><i class="fas fa-file-contract"></i> CNPJ: 18.102.316/0001-50</p>
-                        <p><i class="fas fa-building"></i> IE: 142.382.880.119 - SP</p>
-                        <p><i class="fas fa-user-tie"></i> Proprietário: Otavio A. O. Neto</p>
-                        <p><i class="fas fa-calendar-alt"></i> Desde: 13/05/2013</p>
+                    <h3>Políticas da Loja</h3>
+                    <div class="legal-info">
+                        <p>• Política de Privacidade</p>
+                        <p>• Termos de Uso do Site</p>
+                        <p>• Política de Trocas e Devoluções</p>
+                        <p>• Garantia Legal dos Produtos</p>
+                        <p>• Código de Defesa do Consumidor</p>
                     </div>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2013-2024 Mixmacro Ferragens e Ferramentas - Todos os direitos reservados.</p>
-                <p style="margin-top: 10px;">Este site é dedicado exclusivamente à venda de Dobradiça de Armário Retário Código 3529.</p>
+                <p>&copy; 2024 Ferragens Premium - Especialistas em Ferragens para Móveis. Todos os direitos reservados.</p>
+                <p style="margin-top: 10px;">Este site é dedicado exclusivamente à comercialização de Dobradiça de Armário Retário Código 3529.</p>
             </div>
         </div>
     </footer>
@@ -1178,14 +1452,39 @@
     <script>
         // Controle de quantidade
         document.addEventListener('DOMContentLoaded', function() {
+            // Elementos de quantidade
             const minusBtn = document.querySelector('.quantity-btn.minus');
             const plusBtn = document.querySelector('.quantity-btn.plus');
             const quantityInput = document.querySelector('.quantity-input');
             
+            // Preço unitário
+            const unitPrice = 8.05;
+            
+            // Atualizar preço total
+            function updateTotalPrice() {
+                const quantity = parseInt(quantityInput.value);
+                const totalPrice = (unitPrice * quantity).toFixed(2);
+                const installmentValue = (totalPrice / 12).toFixed(2);
+                
+                // Atualizar elementos de preço (se existirem na página)
+                const totalElement = document.querySelector('.total-price');
+                const installmentElement = document.querySelector('.installment-value');
+                
+                if (totalElement) {
+                    totalElement.textContent = `R$ ${totalPrice}`;
+                }
+                
+                if (installmentElement) {
+                    installmentElement.textContent = `12x de R$ ${installmentValue}`;
+                }
+            }
+            
+            // Event listeners para quantidade
             minusBtn.addEventListener('click', function() {
                 let currentValue = parseInt(quantityInput.value);
                 if (currentValue > 1) {
                     quantityInput.value = currentValue - 1;
+                    updateTotalPrice();
                 }
             });
             
@@ -1193,6 +1492,7 @@
                 let currentValue = parseInt(quantityInput.value);
                 if (currentValue < 100) {
                     quantityInput.value = currentValue + 1;
+                    updateTotalPrice();
                 }
             });
             
@@ -1203,19 +1503,26 @@
                 } else if (value > 100) {
                     this.value = 100;
                 }
+                updateTotalPrice();
             });
             
             // Botão de compra
             const buyButton = document.querySelector('.buy-button');
             buyButton.addEventListener('click', function() {
                 const quantity = parseInt(quantityInput.value);
-                const price = 8.05;
-                const total = (price * quantity).toFixed(2);
+                const total = (unitPrice * quantity).toFixed(2);
                 
-                alert(`Produto adicionado ao carrinho!\n\nDobradiça Retário Código 3529\nQuantidade: ${quantity}\nValor total: R$ ${total}\n\nVocê será redirecionado para o checkout seguro.`);
+                // Animação do botão
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+                
+                // Modal de confirmação (simulado)
+                alert(`🎉 Pedido confirmado!\n\n✅ Dobradiça Retário Código 3529\n📦 Quantidade: ${quantity} unidades\n💰 Valor total: R$ ${total}\n\nVocê será redirecionado para o checkout seguro em instantes...`);
             });
             
-            // Animações
+            // Animações de entrada
             const animateElements = document.querySelectorAll('.animate');
             
             const observer = new IntersectionObserver((entries) => {
@@ -1223,6 +1530,7 @@
                     if (entry.isIntersecting) {
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
                     }
                 });
             }, {
@@ -1232,11 +1540,70 @@
             
             animateElements.forEach(el => {
                 el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                el.style.transform = 'translateY(40px)';
+                el.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
                 observer.observe(el);
             });
+            
+            // Atualizar ano no copyright
+            const yearSpan = document.querySelector('.copyright');
+            if (yearSpan) {
+                const currentYear = new Date().getFullYear();
+                yearSpan.innerHTML = yearSpan.innerHTML.replace('2024', currentYear);
+            }
+            
+            // Efeito de digitação no título (opcional)
+            const productTitle = document.querySelector('.product-title');
+            const originalText = productTitle.textContent;
+            productTitle.textContent = '';
+            
+            let i = 0;
+            function typeWriter() {
+                if (i < originalText.length) {
+                    productTitle.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            
+            // Iniciar efeito de digitação após 500ms
+            setTimeout(typeWriter, 500);
         });
+        
+        // Adicionar efeito de confete no clique do botão de compra (opcional)
+        function createConfetti() {
+            const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6'];
+            const confettiCount = 50;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.borderRadius = '50%';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '-10px';
+                confetti.style.zIndex = '9999';
+                confetti.style.pointerEvents = 'none';
+                
+                document.body.appendChild(confetti);
+                
+                // Animação
+                const animation = confetti.animate([
+                    { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                    { transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                ], {
+                    duration: 1000 + Math.random() * 1000,
+                    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+                });
+                
+                animation.onfinish = () => confetti.remove();
+            }
+        }
+        
+        // Adicionar confetti ao botão de compra
+        document.querySelector('.buy-button').addEventListener('click', createConfetti);
     </script>
 </body>
 </html>
